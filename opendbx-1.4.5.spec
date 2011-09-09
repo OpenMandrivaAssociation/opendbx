@@ -78,7 +78,7 @@ Release:    46.2
 Summary:    Unified database layer with a clean and lightweight interface
 Summary(de.UTF-8):    Bibliothek zum Zugriff auf Datenbanken über eine einheitliche Schnittstelle
 Summary(pl.UTF-8):    Rozszerzana biblioteka dostępu do baz danych
-Group:    Database
+Group:    Databases
 License:    LGPL
 URL:    http://www.linuxnetworks.de/opendbx/download/
 Source0:    %{name}-%{version}.tar.gz
