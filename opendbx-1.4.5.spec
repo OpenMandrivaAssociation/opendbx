@@ -74,7 +74,7 @@
 
 Name:    opendbx
 Version:    1.4.5
-Release:    46.6
+Release:    46.7
 Summary:    Unified database layer with a clean and lightweight interface
 Summary(de.UTF-8):    Bibliothek zum Zugriff auf Datenbanken über eine einheitliche Schnittstelle
 Summary(pl.UTF-8):    Rozszerzana biblioteka dostępu do baz danych
@@ -107,16 +107,16 @@ różne bazy danych.
 %package utils
 Summary:    Utility application for manipulating database content
 Summary(de.UTF-8):    Hilfswerkzeuge für die Manipulation von Datenbankinhalten
-Group:    Applications/Databases
+Group:    Databases
 Requires:    %{name} >= %{version}
 Requires:    readline, ncurses
 BuildRequires:    gcc-c++, gettext, readline, readline-devel, ncurses, ncurses-devel
 
-%description utils
+%description -n utils
 Utility application for manipulating database content either interactively by
 the user or in batch mode.
 
-%description utils -l de.UTF-8
+%description -n utils -l de.UTF-8
 Hilfswerkzeuge für die Manipulation von Datenbankinhalten, entweder interaktiv
 durch den Benutzer oder im Stapelbetrieb durch ein anderes Programm.
 
@@ -130,13 +130,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    pkgconfig
 BuildRequires: doxygen
 
-%description devel
+%description -n devel
 Header files for the OpenDBX database abstraction library
 
-%description devel -l de.UTF-8
+%description -n devel -l de.UTF-8
 Schnittstellen der OpenDBX Datenbankbibliothek zur Softwareentwicklung
 
-%description devel -l pl.UTF-8
+%description -n devel -l pl.UTF-8
 Pliki nagłówkowe biblioteki opendbx.
 
 
@@ -151,13 +151,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    firebird
 BuildRequires:    firebird-devel
 
-%description firebird
+%description -n firebird
 Firebird/Interbase backend for the OpenDBX database abstraction library
 
-%description firebird -l de.UTF-8
+%description -n firebird -l de.UTF-8
 Firebird/Interbase Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description firebird -l pl.UTF-8
+%description -n firebird -l pl.UTF-8
 Backend bazy danych Firebird dla biblioteki opendbx.
 
 %endif
@@ -174,13 +174,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
 
-%description mssql
+%description -n mssql
 MS SQL Server backend for the OpenDBX database abstraction library
 
-%description mssql -l de.UTF-8
+%description -n mssql -l de.UTF-8
 MS SQL Server Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description mssql -l pl.UTF-8
+%description -n mssql -l pl.UTF-8
 Backend bazy danych MS SQL dla biblioteki opendbx.
 
 %endif
@@ -197,13 +197,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    mysql
 BuildRequires:    mysql-devel
 
-%description mysql
+%description -n mysql
 MySQL backend for the OpenDBX database abstraction library
 
-%description mysql -l de.UTF-8
+%description -n mysql -l de.UTF-8
 MySQL Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description mysql -l pl.UTF-8
+%description -n mysql -l pl.UTF-8
 Backend bazy danych MySQL dla biblioteki opendbx.
 
 %endif
@@ -220,13 +220,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    unixODBC
 BuildRequires:    unixODBC-devel
 
-%description odbc
+%description -n odbc
 ODBC backend for the OpenDBX database abstraction library
 
-%description odbc -l de.UTF-8
+%description -n odbc -l de.UTF-8
 ODBC Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description odbc -l pl.UTF-8
+%description -n odbc -l pl.UTF-8
 Backend bazy danych ODBC dla biblioteki opendbx.
 
 %endif
@@ -241,13 +241,13 @@ Summary(pl.UTF-8):	Backend bazy danych Oracle dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 
-%description oracle
+%description -n oracle
 Oracle ctlib backend for the OpenDBX database abstraction library
 
-%description oracle -l de.UTF-8
+%description -n oracle -l de.UTF-8
 Oracle Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description oracle -l pl.UTF-8
+%description -n oracle -l pl.UTF-8
 Backend bazy danych Oracle dla biblioteki OpenDBX.
 
 %endif
@@ -264,13 +264,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    postgresql
 BuildRequires:    postgresql-devel
 
-%description pgsql
+%description -n pgsql
 PostgreSQL backend for the OpenDBX database abstraction library
 
-%description pgsql -l de.UTF-8
+%description -n pgsql -l de.UTF-8
 PostgreSQL Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description pgsql -l pl.UTF-8
+%description -n pgsql -l pl.UTF-8
 Backend bazy danych PostgreSQL dla biblioteki opendbx.
 
 %endif
@@ -287,13 +287,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    sqlite < 3.0
 BuildRequires:    sqlite-devel < 3.0
 
-%description sqlite
+%description -n sqlite
 SQLite backend for the OpenDBX database abstraction library
 
-%description sqlite -l de.UTF-8
+%description -n sqlite -l de.UTF-8
 Sqlite Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description sqlite -l pl.UTF-8
+%description -n sqlite -l pl.UTF-8
 Backend bazy danych sqlite dla biblioteki opendbx.
 
 %endif
@@ -315,13 +315,13 @@ Requires:    sqlite >= 3.0
 BuildRequires: sqlite-devel >= 3.0
 %endif
 
-%description sqlite3
+%description -n sqlite3
 SQLite3 backend for the OpenDBX database abstraction library
 
-%description sqlite3 -l de.UTF-8
+%description -n sqlite3 -l de.UTF-8
 Sqlite3 Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description sqlite3 -l pl.UTF-8
+%description -n sqlite3 -l pl.UTF-8
 Backend bazy danych sqlite3 dla biblioteki opendbx.
 
 %endif
@@ -338,13 +338,13 @@ Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
 
-%description sybase
+%description -n sybase
 Sybase ctlib backend for the OpenDBX database abstraction library
 
-%description sybase -l de.UTF-8
+%description -n sybase -l de.UTF-8
 Sybase Unterstützung für die OpenDBX Datenbankbibliothek
 
-%description sybase -l pl.UTF-8
+%description -n sybase -l pl.UTF-8
 Backend bazy danych sybase dla biblioteki opendbx.
 
 %endif
