@@ -104,7 +104,7 @@ odpowiednia biblioteka, aby małym nakładem pracy aplikacja obsługiwała
 różne bazy danych.
 
 
-%package utils
+%package -n utils
 Summary:    Utility application for manipulating database content
 Summary(de.UTF-8):    Hilfswerkzeuge für die Manipulation von Datenbankinhalten
 Group:    Databases
@@ -121,7 +121,7 @@ Hilfswerkzeuge für die Manipulation von Datenbankinhalten, entweder interaktiv
 durch den Benutzer oder im Stapelbetrieb durch ein anderes Programm.
 
 
-%package devel
+%package -n devel
 Summary:    OpenDBX development headers
 Summary(de.UTF-8):    Entwicklungsschnittstellen für OpenDBX
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki OpenDBX
@@ -142,7 +142,7 @@ Pliki nagłówkowe biblioteki opendbx.
 
 %if 0%{?build_firebird:1}
 
-%package firebird
+%package -n firebird
 Summary:    Firebird/Interbase backend for OpenDBX
 Summary(de.UTF-8):    Firebird/Interbase Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych Firebird dla biblioteki OpenDBX
@@ -165,7 +165,7 @@ Backend bazy danych Firebird dla biblioteki opendbx.
 
 %if 0%{?build_mssql:1}
 
-%package mssql
+%package -n mssql
 Summary:    MS SQL Server backend for OpenDBX
 Summary(de.UTF-8):    MS SQL Server Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych MS SQL dla biblioteki OpenDBX
@@ -188,7 +188,7 @@ Backend bazy danych MS SQL dla biblioteki opendbx.
 
 %if 0%{?build_mysql:1}
 
-%package mysql
+%package -n mysql
 Summary:    MySQL backend for OpenDBX
 Summary(de.UTF-8):    MySQL Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych MySQL dla biblioteki OpenDBX
@@ -211,7 +211,7 @@ Backend bazy danych MySQL dla biblioteki opendbx.
 
 %if 0%{?build_odbc:1}
 
-%package odbc
+%package -n odbc
 Summary:    ODBC backend for OpenDBX
 Summary(de.UTF-8):    ODBC Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych ODBC dla biblioteki OpenDBX
@@ -234,7 +234,7 @@ Backend bazy danych ODBC dla biblioteki opendbx.
 
 %if 0%{?build_oracle:1}
 
-%package oracle
+%package -n oracle
 Summary:    Oracle backend for OpenDBX
 Summary(de.UTF-8):    Oracle Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych Oracle dla biblioteki OpenDBX
@@ -255,7 +255,7 @@ Backend bazy danych Oracle dla biblioteki OpenDBX.
 
 %if 0%{?build_pgsql:1}
 
-%package pgsql
+%package -n pgsql
 Summary:    PostgreSQL backend for OpenDBX
 Summary(de.UTF-8):    PostgreSQL Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych PostgreSQL dla biblioteki OpenDBX
@@ -278,7 +278,7 @@ Backend bazy danych PostgreSQL dla biblioteki opendbx.
 
 %if 0%{?build_sqlite:1}
 
-%package sqlite
+%package -n sqlite
 Summary:    SQLite backend for OpenDBX
 Summary(de.UTF-8):    SQLite Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych SQLite dla biblioteki OpenDBX
@@ -301,7 +301,7 @@ Backend bazy danych sqlite dla biblioteki opendbx.
 
 %if 0%{?build_sqlite3:1}
 
-%package sqlite3
+%package -n sqlite3
 Summary:    SQLite3 backend for OpenDBX
 Summary(de.UTF-8):    SQLite3 Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych SQLite3 dla biblioteki OpenDBX
@@ -329,7 +329,7 @@ Backend bazy danych sqlite3 dla biblioteki opendbx.
 
 %if 0%{?build_sybase:1}
 
-%package sybase
+%package -n sybase
 Summary:    Sybase backend for OpenDBX
 Summary(de.UTF-8):    Sybase Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych Sybase dla biblioteki OpenDBX
