@@ -74,7 +74,7 @@
 
 Name:    opendbx
 Version:    1.4.5
-Release:    46.5
+Release:    46.6
 Summary:    Unified database layer with a clean and lightweight interface
 Summary(de.UTF-8):    Bibliothek zum Zugriff auf Datenbanken über eine einheitliche Schnittstelle
 Summary(pl.UTF-8):    Rozszerzana biblioteka dostępu do baz danych
@@ -125,7 +125,7 @@ durch den Benutzer oder im Stapelbetrieb durch ein anderes Programm.
 Summary:    OpenDBX development headers
 Summary(de.UTF-8):    Entwicklungsschnittstellen für OpenDBX
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    pkgconfig
 BuildRequires: doxygen
@@ -146,7 +146,7 @@ Pliki nagłówkowe biblioteki opendbx.
 Summary:    Firebird/Interbase backend for OpenDBX
 Summary(de.UTF-8):    Firebird/Interbase Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych Firebird dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    firebird
 BuildRequires:    firebird-devel
@@ -169,7 +169,7 @@ Backend bazy danych Firebird dla biblioteki opendbx.
 Summary:    MS SQL Server backend for OpenDBX
 Summary(de.UTF-8):    MS SQL Server Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych MS SQL dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
@@ -192,7 +192,7 @@ Backend bazy danych MS SQL dla biblioteki opendbx.
 Summary:    MySQL backend for OpenDBX
 Summary(de.UTF-8):    MySQL Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych MySQL dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    mysql
 BuildRequires:    mysql-devel
@@ -215,7 +215,7 @@ Backend bazy danych MySQL dla biblioteki opendbx.
 Summary:    ODBC backend for OpenDBX
 Summary(de.UTF-8):    ODBC Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych ODBC dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    unixODBC
 BuildRequires:    unixODBC-devel
@@ -238,7 +238,7 @@ Backend bazy danych ODBC dla biblioteki opendbx.
 Summary:    Oracle backend for OpenDBX
 Summary(de.UTF-8):    Oracle Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych Oracle dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 
 %description oracle
@@ -259,7 +259,7 @@ Backend bazy danych Oracle dla biblioteki OpenDBX.
 Summary:    PostgreSQL backend for OpenDBX
 Summary(de.UTF-8):    PostgreSQL Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych PostgreSQL dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    postgresql
 BuildRequires:    postgresql-devel
@@ -282,7 +282,7 @@ Backend bazy danych PostgreSQL dla biblioteki opendbx.
 Summary:    SQLite backend for OpenDBX
 Summary(de.UTF-8):    SQLite Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych SQLite dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    sqlite < 3.0
 BuildRequires:    sqlite-devel < 3.0
@@ -305,7 +305,7 @@ Backend bazy danych sqlite dla biblioteki opendbx.
 Summary:    SQLite3 backend for OpenDBX
 Summary(de.UTF-8):    SQLite3 Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych SQLite3 dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 %if 0%{?mandriva_version}
 Requires:    sqlite3-tools
@@ -333,7 +333,7 @@ Backend bazy danych sqlite3 dla biblioteki opendbx.
 Summary:    Sybase backend for OpenDBX
 Summary(de.UTF-8):    Sybase Unterstützung für OpenDBX
 Summary(pl.UTF-8):	Backend bazy danych Sybase dla biblioteki OpenDBX
-Group:    Development/Libraries
+Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
