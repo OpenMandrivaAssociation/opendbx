@@ -74,7 +74,7 @@
 
 Name:    opendbx
 Version:    1.4.5
-Release:    46.3
+Release:    46.4
 Summary:    Unified database layer with a clean and lightweight interface
 Summary(de.UTF-8):    Bibliothek zum Zugriff auf Datenbanken über eine einheitliche Schnittstelle
 Summary(pl.UTF-8):    Rozszerzana biblioteka dostępu do baz danych
@@ -359,6 +359,7 @@ Backend bazy danych sybase dla biblioteki opendbx.
 %build
 CPPFLAGS="%{!?_without_mysql:-I/usr/include/mysql} %{!?_without_pgsql:-I/usr/include/pgsql}"; export CPPFLAGS;
 LDFLAGS="-L/lib64 %{!?_without_mysql:-L/usr/lib/mysql -L/usr/lib64/mysql}"; export LDFLAGS;
+autoreconf -i
 %configure \
     --disable-rpath \
     --disable-static \
