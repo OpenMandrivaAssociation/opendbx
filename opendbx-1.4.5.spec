@@ -404,7 +404,7 @@ if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 
 
-%files utils -f %{name}-utils.lang
+%files -n utils -f %{name}-utils.lang
 %defattr(-,root,root,-)
 %{_bindir}/odbx-sql
 %{_datadir}/%{name}
@@ -412,7 +412,7 @@ if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
 #%{_mandir}/man1/*
 
 
-%files devel
+%files -n devel
 %defattr(-,root,root,-)
 %{_includedir}/odbx.h
 %{_includedir}/opendbx
@@ -425,63 +425,63 @@ if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
 
 
 %if 0%{?build_firebird:1}
-%files firebird
+%files -n firebird
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libfirebirdbackend.so*
 %endif
 
 
 %if 0%{?build_mssql:1}
-%files mssql
+%files -n mssql
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libmssqlbackend.so*
 %endif
 
 
 %if 0%{?build_mysql:1}
-%files mysql
+%files -n mysql
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libmysqlbackend.so*
 %endif
 
 
 %if 0%{?build_odbc:1}
-%files odbc
+%files -n odbc
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libodbcbackend.so*
 %endif
 
 
 %if 0%{?build_oracle:1}
-%files oracle
+%files -n oracle
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/liboraclebackend.so*
 %endif
 
 
 %if 0%{?build_pgsql:1}
-%files pgsql
+%files -n pgsql
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libpgsqlbackend.so*
 %endif
 
 
 %if 0%{?build_sqlite:1}
-%files sqlite
+%files -n sqlite
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libsqlitebackend.so*
 %endif
 
 
 %if 0%{?build_sqlite3:1}
-%files sqlite3
+%files -n sqlite3
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libsqlite3backend.so*
 %endif
 
 
 %if 0%{?build_sybase:1}
-%files sybase
+%files -n sybase
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libsybasebackend.so*
 %endif
