@@ -486,4 +486,50 @@ if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
 %{_libdir}/opendbx/libsybasebackend.so*
 %endif
 
+%changelog
+* Mon Apr 19 2010 Norbert Sendetzky <norbert@linuxnetworks.de> 1.4.5-1
+- Centralized decisions which backends to build
+- Build firebird, mssql and sybase backends for supported distributions
+- Reordered backends
+
+* Wed Sep 30 2009 Norbert Sendetzky <norbert@linuxnetworks.de> 1.4.4-1
+- Fixed included backends in main package
+- Fixed odbx package
+- Fixed builds on x86_64 platforms
+- Compatible with OpenSUSE build service
+- Added workarounds for RHEL, CentOS and Mandriva regarding readline
+
+* Sun Apr 19 2009 Norbert Sendetzky <norbert@linuxnetworks.de> 1.4.1-1
+- Added opendbxplus.pc
+
+* Sun Jun 15 2008 Norbert Sendetzky <norbert@linuxnetworks.de> 1.3.11-1
+- Added items for odbc backend and utils
+
+* Mon Mar 17 2008 Norbert Sendetzky <norbert@linuxnetworks.de> 1.3.7-1
+- Added polish summary and descriptions (thanks to PLD team)
+- Added items for oracle backend
+
+* Wed Jan 31 2007 Norbert Sendetzky <norbert@linuxnetworks.de> 1.2.1-1
+- Added german summary and descriptions
+- Disabled static library builds and removed libtool files
+- Added ldconfig call in post and postun sections
+- Added gettext and pkgconfig as requirements
+- Replaced language file handling with find_lang macro
+- Used optflags macro instead of hard coded compiler flags
+- Used macro style consistently
+- Corrected mail addresses
+- Removed oracle sections
+- Fixed _without_pgqql
+- Minor changes
+
+* Sat Dec 09 2006 Norbert Sendetzky <norbert@linuxnetworks.de> 1.1.8-1
+- Added mssql, sybase and oracle backend
+
+* Tue Jun 13 2006 Kees Monshouwer <mind@monshouwer.com> 1.1.0-2
+- Fixed a few minor problems
+- Added conditional build support
+- Added firefird and freetds backend
+
+* Mon Jun 12 2006 Kees Monshouwer <mind@monshouwer.com> 1.1.0-1
+- Initial build for CentOS 4.3
 
