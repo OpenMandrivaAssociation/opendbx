@@ -117,42 +117,25 @@ the user or in batch mode.
 
 %package -n devel
 Summary:    OpenDBX development headers
-Summary(de.UTF-8):    Entwicklungsschnittstellen für OpenDBX
-Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    pkgconfig
 BuildRequires: doxygen
 
 %description -n devel
-Header files for the OpenDBX database abstraction library
-
-%description -n devel -l de.UTF-8
-Schnittstellen der OpenDBX Datenbankbibliothek zur Softwareentwicklung
-
-%description -n devel -l pl.UTF-8
-Pliki nagłówkowe biblioteki opendbx.
-
+Header files for the OpenDBX database abstraction library.
 
 %if 0%{?build_firebird:1}
 
 %package -n firebird
 Summary:    Firebird/Interbase backend for OpenDBX
-Summary(de.UTF-8):    Firebird/Interbase Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych Firebird dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    firebird
 BuildRequires:    firebird-devel
 
 %description -n firebird
-Firebird/Interbase backend for the OpenDBX database abstraction library
-
-%description -n firebird -l de.UTF-8
-Firebird/Interbase Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n firebird -l pl.UTF-8
-Backend bazy danych Firebird dla biblioteki opendbx.
+Firebird/Interbase backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -161,21 +144,13 @@ Backend bazy danych Firebird dla biblioteki opendbx.
 
 %package -n mssql
 Summary:    MS SQL Server backend for OpenDBX
-Summary(de.UTF-8):    MS SQL Server Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych MS SQL dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
 
 %description -n mssql
-MS SQL Server backend for the OpenDBX database abstraction library
-
-%description -n mssql -l de.UTF-8
-MS SQL Server Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n mssql -l pl.UTF-8
-Backend bazy danych MS SQL dla biblioteki opendbx.
+MS SQL Server backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -184,21 +159,13 @@ Backend bazy danych MS SQL dla biblioteki opendbx.
 
 %package -n mysql
 Summary:    MySQL backend for OpenDBX
-Summary(de.UTF-8):    MySQL Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych MySQL dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    mysql
 BuildRequires:    mysql-devel
 
 %description -n mysql
-MySQL backend for the OpenDBX database abstraction library
-
-%description -n mysql -l de.UTF-8
-MySQL Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n mysql -l pl.UTF-8
-Backend bazy danych MySQL dla biblioteki opendbx.
+MySQL backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -207,21 +174,13 @@ Backend bazy danych MySQL dla biblioteki opendbx.
 
 %package -n odbc
 Summary:    ODBC backend for OpenDBX
-Summary(de.UTF-8):    ODBC Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych ODBC dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    unixODBC
 BuildRequires:    unixODBC-devel
 
 %description -n odbc
-ODBC backend for the OpenDBX database abstraction library
-
-%description -n odbc -l de.UTF-8
-ODBC Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n odbc -l pl.UTF-8
-Backend bazy danych ODBC dla biblioteki opendbx.
+ODBC backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -230,19 +189,11 @@ Backend bazy danych ODBC dla biblioteki opendbx.
 
 %package -n oracle
 Summary:    Oracle backend for OpenDBX
-Summary(de.UTF-8):    Oracle Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych Oracle dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 
 %description -n oracle
-Oracle ctlib backend for the OpenDBX database abstraction library
-
-%description -n oracle -l de.UTF-8
-Oracle Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n oracle -l pl.UTF-8
-Backend bazy danych Oracle dla biblioteki OpenDBX.
+Oracle ctlib backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -251,21 +202,13 @@ Backend bazy danych Oracle dla biblioteki OpenDBX.
 
 %package -n pgsql
 Summary:    PostgreSQL backend for OpenDBX
-Summary(de.UTF-8):    PostgreSQL Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych PostgreSQL dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    postgresql
 BuildRequires:    postgresql-devel
 
 %description -n pgsql
-PostgreSQL backend for the OpenDBX database abstraction library
-
-%description -n pgsql -l de.UTF-8
-PostgreSQL Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n pgsql -l pl.UTF-8
-Backend bazy danych PostgreSQL dla biblioteki opendbx.
+PostgreSQL backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -274,21 +217,13 @@ Backend bazy danych PostgreSQL dla biblioteki opendbx.
 
 %package -n sqlite
 Summary:    SQLite backend for OpenDBX
-Summary(de.UTF-8):    SQLite Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych SQLite dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    sqlite < 3.0
 BuildRequires:    sqlite-devel < 3.0
 
 %description -n sqlite
-SQLite backend for the OpenDBX database abstraction library
-
-%description -n sqlite -l de.UTF-8
-Sqlite Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n sqlite -l pl.UTF-8
-Backend bazy danych sqlite dla biblioteki opendbx.
+SQLite backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -297,8 +232,6 @@ Backend bazy danych sqlite dla biblioteki opendbx.
 
 %package -n sqlite3
 Summary:    SQLite3 backend for OpenDBX
-Summary(de.UTF-8):    SQLite3 Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych SQLite3 dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 %if 0%{?mandriva_version}
@@ -310,13 +243,7 @@ BuildRequires: sqlite-devel >= 3.0
 %endif
 
 %description -n sqlite3
-SQLite3 backend for the OpenDBX database abstraction library
-
-%description -n sqlite3 -l de.UTF-8
-Sqlite3 Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n sqlite3 -l pl.UTF-8
-Backend bazy danych sqlite3 dla biblioteki opendbx.
+SQLite3 backend for the OpenDBX database abstraction library.
 
 %endif
 
@@ -325,21 +252,13 @@ Backend bazy danych sqlite3 dla biblioteki opendbx.
 
 %package -n sybase
 Summary:    Sybase backend for OpenDBX
-Summary(de.UTF-8):    Sybase Unterstützung für OpenDBX
-Summary(pl.UTF-8):	Backend bazy danych Sybase dla biblioteki OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
 
 %description -n sybase
-Sybase ctlib backend for the OpenDBX database abstraction library
-
-%description -n sybase -l de.UTF-8
-Sybase Unterstützung für die OpenDBX Datenbankbibliothek
-
-%description -n sybase -l pl.UTF-8
-Backend bazy danych sybase dla biblioteki opendbx.
+Sybase ctlib backend for the OpenDBX database abstraction library.
 
 %endif
 
