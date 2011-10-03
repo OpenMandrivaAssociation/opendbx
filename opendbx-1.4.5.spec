@@ -74,7 +74,7 @@
 
 Name:    opendbx
 Version:    1.4.5
-Release:    46.7
+Release:    46.8
 Summary:    Unified database layer with a clean and lightweight interface
 Summary(de.UTF-8):    Bibliothek zum Zugriff auf Datenbanken über eine einheitliche Schnittstelle
 Summary(pl.UTF-8):    Rozszerzana biblioteka dostępu do baz danych
@@ -106,7 +106,6 @@ różne bazy danych.
 
 %package -n utils
 Summary:    Utility application for manipulating database content
-Summary(de.UTF-8):    Hilfswerkzeuge für die Manipulation von Datenbankinhalten
 Group:    Databases
 Requires:    %{name} >= %{version}
 Requires:    readline, ncurses
@@ -115,11 +114,6 @@ BuildRequires:    gcc-c++, gettext, readline, readline-devel, ncurses, ncurses-d
 %description -n utils
 Utility application for manipulating database content either interactively by
 the user or in batch mode.
-
-%description -n utils -l de.UTF-8
-Hilfswerkzeuge für die Manipulation von Datenbankinhalten, entweder interaktiv
-durch den Benutzer oder im Stapelbetrieb durch ein anderes Programm.
-
 
 %package -n devel
 Summary:    OpenDBX development headers
