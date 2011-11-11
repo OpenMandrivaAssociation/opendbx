@@ -74,7 +74,7 @@
 
 Name:    opendbx
 Version:    1.4.5
-Release:    46.8
+Release:    46.9
 Summary:    Unified database layer with a clean and lightweight interface
 Summary(de.UTF-8):    Bibliothek zum Zugriff auf Datenbanken über eine einheitliche Schnittstelle
 Summary(pl.UTF-8):    Rozszerzana biblioteka dostępu do baz danych
@@ -90,51 +90,37 @@ OpenDBX provides a clean and lightweight API for interfacing native relational
 database APIs in a consistent way. By using the OpenDBX API you don't have to
 adapt your program to the different database APIs by yourself.
 
-%description -l de.UTF-8
-OpenDBX ist eine schlanke und einfach zu verwendende Bibliothek, die es
-ermöglicht verschiedene Datenbankserver über eine konsistente Schnittstelle
-anzusprechen.
-
-%description -l pl.UTF-8
-OpenDBX to skrajnie lekka, ale rozszerzalna biblioteka dostępu do baz
-danych napisana w C. Udostępnia warstwę abstrakcji dla wszystkich
-obsługiwanych baz danych w jednym, przejrzystym i prostym interfejsie
-automatycznie prowadzącym do eleganckiego projektu kodu. Jest to
-odpowiednia biblioteka, aby małym nakładem pracy aplikacja obsługiwała
-różne bazy danych.
-
-
-%package -n utils
+%package utils
 Summary:    Utility application for manipulating database content
 Group:    Databases
 Requires:    %{name} >= %{version}
 Requires:    readline, ncurses
 BuildRequires:    gcc-c++, gettext, readline, readline-devel, ncurses, ncurses-devel
 
-%description -n utils
+%description utils
 Utility application for manipulating database content either interactively by
 the user or in batch mode.
 
-%package -n devel
+%package devel
 Summary:    OpenDBX development headers
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    pkgconfig
 BuildRequires: doxygen
 
-%description -n devel
+%description devel
 Header files for the OpenDBX database abstraction library.
 
 %if 0%{?build_firebird:1}
 
-%package -n firebird
+%package firebird
 Summary:    Firebird/Interbase backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    firebird
 BuildRequires:    firebird-devel
 
-%description -n firebird
+%description firebird
 Firebird/Interbase backend for the OpenDBX database abstraction library.
 
 %endif
@@ -142,14 +128,14 @@ Firebird/Interbase backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_mssql:1}
 
-%package -n mssql
+%package mssql
 Summary:    MS SQL Server backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
 
-%description -n mssql
+%description mssql
 MS SQL Server backend for the OpenDBX database abstraction library.
 
 %endif
@@ -157,14 +143,14 @@ MS SQL Server backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_mysql:1}
 
-%package -n mysql
+%package mysql
 Summary:    MySQL backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    mysql
 BuildRequires:    mysql-devel
 
-%description -n mysql
+%description mysql
 MySQL backend for the OpenDBX database abstraction library.
 
 %endif
@@ -172,14 +158,14 @@ MySQL backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_odbc:1}
 
-%package -n odbc
+%package odbc
 Summary:    ODBC backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    unixODBC
 BuildRequires:    unixODBC-devel
 
-%description -n odbc
+%description odbc
 ODBC backend for the OpenDBX database abstraction library.
 
 %endif
@@ -187,12 +173,12 @@ ODBC backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_oracle:1}
 
-%package -n oracle
+%package oracle
 Summary:    Oracle backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 
-%description -n oracle
+%description oracle
 Oracle ctlib backend for the OpenDBX database abstraction library.
 
 %endif
@@ -200,14 +186,14 @@ Oracle ctlib backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_pgsql:1}
 
-%package -n pgsql
+%package pgsql
 Summary:    PostgreSQL backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    postgresql
 BuildRequires:    postgresql-devel
 
-%description -n pgsql
+%description pgsql
 PostgreSQL backend for the OpenDBX database abstraction library.
 
 %endif
@@ -215,14 +201,14 @@ PostgreSQL backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_sqlite:1}
 
-%package -n sqlite
+%package sqlite
 Summary:    SQLite backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    sqlite < 3.0
 BuildRequires:    sqlite-devel < 3.0
 
-%description -n sqlite
+%description sqlite
 SQLite backend for the OpenDBX database abstraction library.
 
 %endif
@@ -230,7 +216,7 @@ SQLite backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_sqlite3:1}
 
-%package -n sqlite3
+%package sqlite3
 Summary:    SQLite3 backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
@@ -242,7 +228,7 @@ Requires:    sqlite >= 3.0
 BuildRequires: sqlite-devel >= 3.0
 %endif
 
-%description -n sqlite3
+%description sqlite3
 SQLite3 backend for the OpenDBX database abstraction library.
 
 %endif
@@ -250,14 +236,14 @@ SQLite3 backend for the OpenDBX database abstraction library.
 
 %if 0%{?build_sybase:1}
 
-%package -n sybase
+%package sybase
 Summary:    Sybase backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
 Requires:    freetds
 BuildRequires:    freetds-devel
 
-%description -n sybase
+%description sybase
 Sybase ctlib backend for the OpenDBX database abstraction library.
 
 %endif
@@ -273,10 +259,8 @@ Sybase ctlib backend for the OpenDBX database abstraction library.
 CPPFLAGS="%{!?_without_mysql:-I/usr/include/mysql} %{!?_without_pgsql:-I/usr/include/pgsql}"; export CPPFLAGS;
 LDFLAGS="-L/lib64 %{!?_without_mysql:-L/usr/lib/mysql -L/usr/lib64/mysql}"; export LDFLAGS;
 autoreconf -i
-%configure \
-    --disable-rpath \
-    --disable-static \
-    --with-backends="\
+
+%configure --disable-rpath --disable-static --with-backends="\
 %{?build_firebird:firebird }\
 %{?build_mssql:mssql }\
 %{?build_mysql:mysql }\
@@ -286,10 +270,9 @@ autoreconf -i
 %{?build_sqlite:sqlite }\
 %{?build_sqlite3:sqlite3 }\
 %{?build_sybase:sybase }\
-" || cat config.log
+"
 
 %{__make} %{?_smp_mflags}
-
 
 %install
 %{__make} DESTDIR=%{buildroot} install
@@ -297,7 +280,6 @@ rm %{buildroot}%{_libdir}/lib*.*a
 rm %{buildroot}%{_libdir}/opendbx/lib*.*a
 %find_lang %{name}
 %find_lang %{name}-utils
-
 
 %clean
 if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
@@ -317,7 +299,7 @@ if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 
 
-%files -n utils -f %{name}-utils.lang
+%files utils -f %{name}-utils.lang
 %defattr(-,root,root,-)
 %{_bindir}/odbx-sql
 %{_datadir}/%{name}
@@ -325,7 +307,7 @@ if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
 #%{_mandir}/man1/*
 
 
-%files -n devel
+%files devel
 %defattr(-,root,root,-)
 %{_includedir}/odbx.h
 %{_includedir}/opendbx
@@ -338,63 +320,63 @@ if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
 
 
 %if 0%{?build_firebird:1}
-%files -n firebird
+%files firebird
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libfirebirdbackend.so*
 %endif
 
 
 %if 0%{?build_mssql:1}
-%files -n mssql
+%files mssql
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libmssqlbackend.so*
 %endif
 
 
 %if 0%{?build_mysql:1}
-%files -n mysql
+%files mysql
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libmysqlbackend.so*
 %endif
 
 
 %if 0%{?build_odbc:1}
-%files -n odbc
+%files odbc
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libodbcbackend.so*
 %endif
 
 
 %if 0%{?build_oracle:1}
-%files -n oracle
+%files oracle
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/liboraclebackend.so*
 %endif
 
 
 %if 0%{?build_pgsql:1}
-%files -n pgsql
+%files pgsql
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libpgsqlbackend.so*
 %endif
 
 
 %if 0%{?build_sqlite:1}
-%files -n sqlite
+%files sqlite
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libsqlitebackend.so*
 %endif
 
 
 %if 0%{?build_sqlite3:1}
-%files -n sqlite3
+%files sqlite3
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libsqlite3backend.so*
 %endif
 
 
 %if 0%{?build_sybase:1}
-%files -n sybase
+%files sybase
 %defattr(-,root,root,-)
 %{_libdir}/opendbx/libsybasebackend.so*
 %endif
