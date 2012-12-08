@@ -73,16 +73,13 @@
 
 
 Name:    opendbx
-Version:    1.4.5
-Release:    46.9
+Version:    1.4.6
+Release:    1
 Summary:    Unified database layer with a clean and lightweight interface
-Summary(de.UTF-8):    Bibliothek zum Zugriff auf Datenbanken über eine einheitliche Schnittstelle
-Summary(pl.UTF-8):    Rozszerzana biblioteka dostępu do baz danych
 Group:    Databases
-License:    LGPL
+License:    LGPL+
 URL:    http://www.linuxnetworks.de/opendbx/download/
-Source0:    %{name}-%{version}.tar.gz
-BuildRoot:    %{_tmppath}/%{name}-%{version}-build
+Source0:    http://linuxnetworks.de/opendbx/download/%{name}-%{version}.tar.gz
 BuildRequires:    gcc-c++, gettext, gettext-devel
 
 %description
@@ -220,13 +217,8 @@ SQLite backend for the OpenDBX database abstraction library.
 Summary:    SQLite3 backend for OpenDBX
 Group:    Databases
 Requires:    %{name} = %{version}-%{release}
-%if 0%{?mandriva_version}
 Requires:    sqlite3-tools
-BuildRequires: sqlite3-devel
-%else
-Requires:    sqlite >= 3.0
-BuildRequires: sqlite-devel >= 3.0
-%endif
+BuildRequires: pkgconfig(sqlite3)
 
 %description sqlite3
 SQLite3 backend for the OpenDBX database abstraction library.
@@ -281,150 +273,70 @@ rm %{buildroot}%{_libdir}/opendbx/lib*.*a
 %find_lang %{name}
 %find_lang %{name}-utils
 
-%clean
-if test "%{buildroot}" != "/"; then rm -rf %{buildroot}; fi
-
-
-%post -p /sbin/ldconfig
-
-
-%postun -p /sbin/ldconfig
-
-
 %files -f %{name}.lang
-%defattr(-,root,root,-)
 %{_libdir}/libopendbx.so.*
 %{_libdir}/libopendbxplus.so.*
+%{_mandir}/man3/odb*.*
+%{_mandir}/man3/Open*.*
+%{_mandir}/man1/odbx*.*
 %dir %{_libdir}/opendbx
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 
 
 %files utils -f %{name}-utils.lang
-%defattr(-,root,root,-)
 %{_bindir}/odbx-sql
-%{_datadir}/%{name}
 %{_datadir}/%{name}/keywords
-#%{_mandir}/man1/*
-
 
 %files devel
-%defattr(-,root,root,-)
 %{_includedir}/odbx.h
 %{_includedir}/opendbx
-%{_includedir}/opendbx/api*
 %{_libdir}/libopendbx.so
 %{_libdir}/libopendbxplus.so
 %{_libdir}/pkgconfig/opendbx.pc
 %{_libdir}/pkgconfig/opendbxplus.pc
-#%{_mandir}/man3/*
 
 
 %if 0%{?build_firebird:1}
 %files firebird
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libfirebirdbackend.so*
 %endif
 
-
 %if 0%{?build_mssql:1}
 %files mssql
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libmssqlbackend.so*
 %endif
 
-
 %if 0%{?build_mysql:1}
 %files mysql
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libmysqlbackend.so*
 %endif
 
-
 %if 0%{?build_odbc:1}
 %files odbc
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libodbcbackend.so*
 %endif
 
-
 %if 0%{?build_oracle:1}
 %files oracle
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/liboraclebackend.so*
 %endif
 
-
 %if 0%{?build_pgsql:1}
 %files pgsql
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libpgsqlbackend.so*
 %endif
 
-
 %if 0%{?build_sqlite:1}
 %files sqlite
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libsqlitebackend.so*
 %endif
 
-
 %if 0%{?build_sqlite3:1}
 %files sqlite3
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libsqlite3backend.so*
 %endif
 
-
 %if 0%{?build_sybase:1}
 %files sybase
-%defattr(-,root,root,-)
 %{_libdir}/opendbx/libsybasebackend.so*
 %endif
-
-%changelog
-* Mon Apr 19 2010 Norbert Sendetzky <norbert@linuxnetworks.de> 1.4.5-1
-- Centralized decisions which backends to build
-- Build firebird, mssql and sybase backends for supported distributions
-- Reordered backends
-
-* Wed Sep 30 2009 Norbert Sendetzky <norbert@linuxnetworks.de> 1.4.4-1
-- Fixed included backends in main package
-- Fixed odbx package
-- Fixed builds on x86_64 platforms
-- Compatible with OpenSUSE build service
-- Added workarounds for RHEL, CentOS and Mandriva regarding readline
-
-* Sun Apr 19 2009 Norbert Sendetzky <norbert@linuxnetworks.de> 1.4.1-1
-- Added opendbxplus.pc
-
-* Sun Jun 15 2008 Norbert Sendetzky <norbert@linuxnetworks.de> 1.3.11-1
-- Added items for odbc backend and utils
-
-* Mon Mar 17 2008 Norbert Sendetzky <norbert@linuxnetworks.de> 1.3.7-1
-- Added polish summary and descriptions (thanks to PLD team)
-- Added items for oracle backend
-
-* Wed Jan 31 2007 Norbert Sendetzky <norbert@linuxnetworks.de> 1.2.1-1
-- Added german summary and descriptions
-- Disabled static library builds and removed libtool files
-- Added ldconfig call in post and postun sections
-- Added gettext and pkgconfig as requirements
-- Replaced language file handling with find_lang macro
-- Used optflags macro instead of hard coded compiler flags
-- Used macro style consistently
-- Corrected mail addresses
-- Removed oracle sections
-- Fixed _without_pgqql
-- Minor changes
-
-* Sat Dec 09 2006 Norbert Sendetzky <norbert@linuxnetworks.de> 1.1.8-1
-- Added mssql, sybase and oracle backend
-
-* Tue Jun 13 2006 Kees Monshouwer <mind@monshouwer.com> 1.1.0-2
-- Fixed a few minor problems
-- Added conditional build support
-- Added firefird and freetds backend
-
-* Mon Jun 12 2006 Kees Monshouwer <mind@monshouwer.com> 1.1.0-1
-- Initial build for CentOS 4.3
-
