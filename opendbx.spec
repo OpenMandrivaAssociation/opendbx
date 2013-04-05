@@ -276,9 +276,9 @@ rm %{buildroot}%{_libdir}/opendbx/lib*.*a
 %files -f %{name}.lang
 %{_libdir}/libopendbx.so.*
 %{_libdir}/libopendbxplus.so.*
-%{_mandir}/man3/odb*.*
-%{_mandir}/man3/Open*.*
-%{_mandir}/man1/odbx*.*
+#%{_mandir}/man3/odb*.*
+#%{_mandir}/man3/Open*.*
+#%{_mandir}/man1/odbx*.*
 %dir %{_libdir}/opendbx
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 
