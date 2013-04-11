@@ -74,12 +74,13 @@
 
 Name:    opendbx
 Version:    1.4.6
-Release:    1
+Release:    2
 Summary:    Unified database layer with a clean and lightweight interface
 Group:    Databases
 License:    LGPL+
 URL:    http://www.linuxnetworks.de/opendbx/download/
 Source0:    http://linuxnetworks.de/opendbx/download/%{name}-%{version}.tar.gz
+Source100:	opendbx.rpmlintrc
 BuildRequires:    gcc-c++, gettext, gettext-devel
 BuildRequires:	docbook-to-man
 %description
@@ -276,9 +277,9 @@ rm %{buildroot}%{_libdir}/opendbx/lib*.*a
 %files -f %{name}.lang
 %{_libdir}/libopendbx.so.*
 %{_libdir}/libopendbxplus.so.*
-#%{_mandir}/man3/odb*.*
-#%{_mandir}/man3/Open*.*
-#%{_mandir}/man1/odbx*.*
+%{_mandir}/man3/odb*.*
+%{_mandir}/man3/Open*.*
+%{_mandir}/man1/odbx*.*
 %dir %{_libdir}/opendbx
 %doc AUTHORS COPYING ChangeLog NEWS README TODO
 
