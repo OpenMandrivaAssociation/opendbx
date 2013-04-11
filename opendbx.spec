@@ -82,7 +82,7 @@ URL:    http://www.linuxnetworks.de/opendbx/download/
 Source0:    http://linuxnetworks.de/opendbx/download/%{name}-%{version}.tar.gz
 Source100:	opendbx.rpmlintrc
 BuildRequires:    gcc-c++, gettext, gettext-devel
-BuildRequires:	dobcbook2x
+BuildRequires:	docbook2x
 %description
 OpenDBX provides a clean and lightweight API for interfacing native relational
 database APIs in a consistent way. By using the OpenDBX API you don't have to
