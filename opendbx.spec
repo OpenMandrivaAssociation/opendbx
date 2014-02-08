@@ -74,7 +74,7 @@
 
 Name:    opendbx
 Version:    1.4.6
-Release:    2
+Release:    3
 Summary:    Unified database layer with a clean and lightweight interface
 Group:    Databases
 License:    LGPL+
