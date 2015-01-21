@@ -84,6 +84,8 @@ Group:		Databases
 License:	LGPL+
 Url:		http://www.linuxnetworks.de/opendbx/download/
 Source0:	http://linuxnetworks.de/opendbx/download/%{name}-%{version}.tar.gz
+Source100:	%{name}.rpmlintrc
+Patch1:		opendbx-1.4.6-doxygen1.8.8.patch
 BuildRequires:	docbook2x
 BuildRequires:	doxygen
 BuildRequires:	gcc-c++
@@ -253,14 +255,20 @@ Sybase ctlib backend for the OpenDBX database abstraction library.
 
 %prep
 %setup -q
+%apply_patches
+
+# fix build with doxygen 1.8.8, needs a suffix on the name to calculate the correct parser
+pushd lib/opendbx
+ln -s api api.dox
+popd
+
 autoreconf -i
 
 %build
 CPPFLAGS="%{!?_without_mysql:-I/usr/include/mysql} %{!?_without_pgsql:-I/usr/include/pgsql}"; export CPPFLAGS;
 LDFLAGS="-L/lib64 %{!?_without_mysql:-L/usr/lib/mysql -L/usr/lib64/mysql}"; export LDFLAGS;
 
-%configure2_5x \
-	--disable-static \
+%configure \
 	--with-backends="\
 	%{?build_firebird:firebird }\
 	%{?build_mssql:mssql }\
