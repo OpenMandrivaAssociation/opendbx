@@ -255,7 +255,7 @@ Sybase ctlib backend for the OpenDBX database abstraction library.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 # fix build with doxygen 1.8.8, needs a suffix on the name to calculate the correct parser
 pushd lib/opendbx
