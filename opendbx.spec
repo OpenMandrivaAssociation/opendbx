@@ -82,7 +82,7 @@ Version:	1.4.6
 Release:	125
 Group:		Databases
 License:	LGPL+
-Url:		http://www.linuxnetworks.de/opendbx/download/
+Url:		https://www.linuxnetworks.de/opendbx/download/
 Source0:	http://linuxnetworks.de/opendbx/download/%{name}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
 Patch1:		opendbx-1.4.6-doxygen1.8.8.patch
